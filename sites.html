@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+    <link rel="stylesheet" type="text/css" href="textdetails.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title> Study Tracker </title>
+    
+  </head>
+  <body>
+    <div class = "layout-all">
+        <div class = "modal-header">
+            <div class = "name-version">
+                <h1 class = "title">
+                    onTRACKer
+                </h1>
+                <span class = "version">(1.0.0)</span>
+                <div class = "line"></div>
+            </div>
+            <div class="animate" id = "logo"></div>
+        </div>
+
+        
+        <div class = "modal-subpages"> <!--buttons to switch between pages-->
+            <a href = "popup.html"  class = "valid-button" class = "subpage-button" id = "todayb"> 
+                Today
+            </a>
+            <a  href = "weekly.html" class = "valid-button" class = "subpage-button"  id = "weekb" > 
+                This Week
+            </a>
+            <button  href = "sites.html"  class = "subpage-button" id = "sitesb"  id = "clicked"> 
+                Sites
+            </button>
+        </div>
+        <div class = "modal-timer" id = "sites" >  <!--main body-->
+            <div class = addsite><a href="https://www.duolingo.com/" target = "_blank">Duolingo</a></div>
+            <div class = addsite><a href="https://www.khanacademy.org/math/calculus-1" target = "_blank">Khan Academy</a></div>
+            <div class = addsite><a href="https://www.freecodecamp.org/learn/" target = "_blank">Free Code Camp</a></div>
+            <div class = addsite><a href="https://www.desmos.com/" target = "_blank">Desmos</a></div>
+            <div id = "addbutton"><img src="add.png" alt="ADD MORE" width = 15px height = 15px></div>
+        </div>
+
+    </div>
+    <script src = "content.js"></script>
+    <script src = "buttons.js"></script>
+  </body>
+</html>

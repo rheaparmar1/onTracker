@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+    <link rel="stylesheet" type="text/css" href="textdetails.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title> Study Tracker </title>
+    
+  </head>
+  <body>
+    <div class = "layout-all">
+        <div class = "modal-header">
+            <div class = "name-version">
+                <h1 class = "title">
+                  onTRACKer
+                </h1>
+                <span class = "version">(1.0.0)</span>
+                <div class = "line"></div>
+            </div>
+            <div class="animate" id = "logo"></div>
+        </div>
+
+        
+        <div class = "modal-subpages"> <!--buttons to switch between pages-->
+            <a href = "popup.html" class = "valid-button" class = "subpage-button" id = "todayb"> 
+                Today
+            </a>
+            <button class = "subpage-button"  id = "weekb"  id = "clicked"> 
+                This Week
+            </button>
+            <a  href = "sites.html"  class = "valid-button"  class = "subpage-button" id = "sitesb"> 
+                Sites
+            </a>
+        </div>
+        <div class = "modal-timer" id = "week" >  <!--main body-->
+            <canvas id="graph"></canvas>
+            <script>
+                var xValues = ["S", "M", "T", "W", "T", "F", "S"];
+                var yValues = [2,0,0,0,0,0,0];
+                
+                new Chart("graph", {
+                  type: "line",
+                  data: {
+                    labels: xValues,
+                    datasets: [{
+                      fill: false,
+                      lineTension: 0,
+                      backgroundColor: "rgba(0,0,255,1.0)",
+                      borderColor: "rgba(0,0,255,0.1)",
+                      data: yValues
+                    }]
+                  },
+                  options: {
+                    legend: {display: false},
+                    scales: {
+                      yAxes: [{ticks: {min: 0, max:16}}],
+                    }
+                  }
+
+
+                });
+            </script>
+        </div>
+
+    </div>
+    <script src = "content.js"></script>
+    <script src = "button.js"></script>
+  </body>
+</html>

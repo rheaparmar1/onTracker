@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+    <link rel="stylesheet" type="text/css" href="textdetails.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <title> Study Tracker </title>
+  </head>
+  <body>
+    <div class = "layout-all">
+        <div class = "modal-header">
+            <div class = "name-version">
+                <h1 class = "title">
+                    onTRACKer
+                </h1>
+                <span class = "version">(1.0.0)</span>
+                <div class = "line"></div>
+            </div>
+            <div class="animate" id = "logo"></div>
+        </div>
+
+        
+        <div class = "modal-subpages"> <!--buttons to switch between pages-->
+            <button class = "subpage-button" id = "todayb" id = "clicked"> 
+                Today
+            </button>
+            <a href = "weekly.html" class = "subpage-button" class = "valid-button" id = "weekb"> 
+                This Week
+            </a>
+            <a  href = "sites.html" class = "subpage-button" class = "valid-button" id = "sitesb"> 
+                Sites
+            </a>
+        </div>
+        <div class = "modal-timer" id = "today" >  <!--main body-->
+            <h1 id="timer">00 : 00 : 00</h1>
+            <div class = "controls">
+                <button name = "start" id = "start" class = "timer-button"> 
+                    Start
+                </button>
+                <button name = "reset" id = "reset" class = "timer-button"> 
+                   Reset
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <script src = "content.js"></script>
+    <script src = "buttons.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </body>
+</html>
